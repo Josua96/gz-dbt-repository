@@ -6,5 +6,24 @@
    - name: gz_raw_data
      tables:
        - name: raw_gz_product
+         description: products of Greenweez / we have the purchase_price per product_id
+         columns:
+           - name: products_id
+             tests:
+               - unique
        - name: raw_gz_sales
+         description: sales of Greenweez / we have on row per product_id found in each orders_id
+         freshness:
+           warn_after:
+             count: 90
+             period: day
+         loaded_at_field: CAST(date_date AS TIMESTAMP)
+         tests:
+          - unique:
+              column_name: "(orders_id || '-' || pdt_id)"
        - name: raw_gz_ship
+         description: shipping information of Greenweez / we have shipping information e.g. shipping costs per orders_id
+         columns:
+           - name: orders_id
+             tests:
+               - unique
