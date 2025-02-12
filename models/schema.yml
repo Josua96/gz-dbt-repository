@@ -30,7 +30,6 @@
                - unique
 
        - name: raw_gz_adwords
-         alias: adwords
          description: adwords information of Greenweez
 
        - name: raw_gz_bing
@@ -39,5 +38,5 @@
        - name: raw_gz_criteo
          description: criteo information of Greenweez
 
-       - name: raw_gz_facebook as facebook
+       - name: raw_gz_facebook
          description: facebook information of Greenweez
