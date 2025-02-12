@@ -28,3 +28,15 @@
            - name: orders_id
              tests:
                - unique
+
+       - name: raw_gz_adwords as adwords
+         description: adwords information of Greenweez
+
+       - name: raw_gz_bing as bing
+         description: bing information of Greenweez
+
+       - name: raw_gz_criteo as criteo
+         description: criteo information of Greenweez
+
+       - name: raw_gz_facebook as facebook
+         description: facebook information of Greenweez
