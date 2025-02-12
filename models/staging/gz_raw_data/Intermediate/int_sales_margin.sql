@@ -1,10 +1,9 @@
 SELECT 
     sales.date_date,
     sales.orders_id,
-    sales.products_id AS sales_products_id,  -- Avoids column name conflict
     sales.quantity,
     sales.revenue,
-    product.products_id AS product_products_id,  -- Alias to avoid duplication
+    product.products_id AS products_id,  -- Alias to avoid duplication
     product.purchase_price,
     COALESCE(sales.quantity, 0) * COALESCE(product.purchase_price, 0) AS purchase_cost,
     COALESCE(sales.revenue, 0) - COALESCE(product.purchase_price, 0) AS margin
