@@ -1,0 +1,7 @@
+SELECT
+    date_date,
+    sum(ads_cost) as ads_cost,
+    sum(ads_impression) as ads_impression,
+    sum(clicks) as ads_clicks
+FROM {{ ref('int_campaigns') }}
+    GROUP BY date_date

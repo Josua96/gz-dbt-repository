@@ -37,9 +37,18 @@
 
        - name: raw_gz_bing
          description: bing information of Greenweez
+         tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
 
        - name: raw_gz_criteo
          description: criteo information of Greenweez
+         tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
 
        - name: raw_gz_facebook
          description: facebook information of Greenweez
+         tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
