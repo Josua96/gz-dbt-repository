@@ -31,6 +31,9 @@
 
        - name: raw_gz_adwords
          description: adwords information of Greenweez
+         tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
 
        - name: raw_gz_bing
          description: bing information of Greenweez
