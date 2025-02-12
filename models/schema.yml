@@ -29,13 +29,14 @@
              tests:
                - unique
 
-       - name: raw_gz_adwords as adwords
+       - name: raw_gz_adwords
+         alias: adwords
          description: adwords information of Greenweez
 
-       - name: raw_gz_bing as bing
+       - name: raw_gz_bing
          description: bing information of Greenweez
 
-       - name: raw_gz_criteo as criteo
+       - name: raw_gz_criteo
          description: criteo information of Greenweez
 
        - name: raw_gz_facebook as facebook
